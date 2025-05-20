@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/Logo Nxx.png" type="image/png" sizes="16x16">
+    <meta name="description"
+        content="Lexxo - Descubre y expresa lo que te define. Marca de productos de calidad y diseño único.">
+    <meta name="author" content="Lexxo">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Lexxo</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="img/Logo_black.png" alt="Logo de Lexxo">
+            <h1>Lexxo</h1>
+        </div>
+
+        <nav>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+            <label for="menu-toggle" class="menu-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+            </label>
+            <ul class="nav-list">
+          <li><a href="#home">Inicio</a></li>
+          <li><a href="#about">Sobre nosotros</a></li>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="home">
+
+        <div class="home">
+            <h2>Lexxo</h2>
+            <p>Descubre y expresa lo que te define.</p>
+            <a href="#productos">Ver productos</a>
+        </div>
+
+        <div class="image-slider">
+          <img id="slider-img" src="img/product - LX/Logo-black-removebg-preview.png" alt="Slider" class="logo-main"/>
+          <img src="img/Logo_black.png" alt="Logo" class="main-logo"/>
+        </div>
+    </main>
+
+    <section id="about">
+        <h2>Sobre nosotros</h2>
+        <p>Lexxo es una marca que busca ofrecer productos de calidad y diseño único. Nos apasiona lo que hacemos y
+            queremos compartirlo contigo.</p>
+
+        <p>En Lexxo, creemos que cada producto cuenta una historia. Nos esforzamos por crear artículos que no solo sean
+            funcionales, sino que también reflejen tu estilo personal.</p>
+    </section>
+
+    <section id="productos">
+        <h2>Productos</h2>
+        <p>Explora nuestra gama de productos diseñados para ti.</p>
+        <div class="product-list">
+            <div class="product-item">
+                <img src="img/product - LX/C1-removebg-preview.png" alt="Producto 1">
+              
+                <button class="info-btn" onclick="showProductInfo({
+                    nombre: 'Camisa LX - Edición Especial',
+                    imagen: 'img/product - LX/C1-removebg-preview.png',
+                    precio: '$20',
+                    material: 'Algodón',   
+                    oferta: '15% OFF' 
+                })">Ver información</button>
+                <div id="product-modal" class="modal" style="display:none;">
+                  <div class="modal-content">
+                    <span class="close" onclick="closeProductInfo()">&times;</span>
+                    <div class="modal-body">
+                      <img id="modal-img" src="" alt="Producto" style="max-width:180px;">
+                      <div class="modal-info">
+                        <h3 id="modal-nombre"></h3>
+                        <p id="modal-precio"></p>
+                        <p id="modal-material"></p>
+                        <p id="modal-oferta" style="color:red;font-weight:bold;"></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="product-item">
+                <img src="img/product - LX/C2-removebg-preview.png" alt="Producto 2">
+                
+                <button class="info-btn" onclick="showProductInfo({
+                    nombre: 'Camisa LX - Edición Especial',
+                    imagen: 'img/product - LX/C2-removebg-preview.png',
+                    precio: '$15',
+                    material: 'Algodón',
+                    oferta: '5% OFF'
+                })">Ver información</button>
+                <div id="product-modal" class="modal" style="display:none;">
+                  <div class="modal-content">
+                    <span class="close" onclick="closeProductInfo()">&times;</span>
+                    <div class="modal-body">
+                      <img id="modal-img" src="" alt="Producto" style="max-width:180px;">
+                      <div class="modal-info">
+                        <h3 id="modal-nombre"></h3>
+                        <p id="modal-precio"></p>
+                        <p id="modal-material"></p>
+                        <p id="modal-oferta" style="color:red;font-weight:bold;"></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="product-item">
+                <img src="img/product - LX/S2-removebg-preview.png" alt="Producto 3">
+                <button class="info-btn" onclick="showProductInfo({
+                    nombre: 'Sueter LX - Edición Pareja',
+                    imagen: 'img/product - LX/S2-removebg-preview.png',
+                    precio: '$30',
+                    material: 'Seda',
+                    oferta: '5% OFF'
+                })">Ver información</button>
+                <div id="product-modal" class="modal" style="display:none;">
+                  <div class="modal-content">
+                    <span class="close" onclick="closeProductInfo()">&times;</span>
+                    <div class="modal-body">
+                      <img id="modal-img" src="" alt="Producto" style="max-width:180px;">
+                      <div class="modal-info">
+                        <h3 id="modal-nombre"></h3>
+                        <p id="modal-precio"></p>
+                        <p id="modal-material"></p>
+                        <p id="modal-oferta" style="color:red;font-weight:bold;"></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="product-item">
+                <img src="img/product - LX/C4-removebg-preview.png" alt="Producto 4">
+                <button class="info-btn" onclick="showProductInfo({
+                    nombre: 'Camisa LX - Edición Japonesa',
+                    imagen: 'img/product - LX/C4-removebg-preview.png',
+                    precio: '$18',
+                    material: 'Lino',
+                    oferta: '10% OFF'
+                })">Ver información</button>
+                <div id="product-modal" class="modal" style="display:none;">
+                  <div class="modal-content">
+                    <span class="close" onclick="closeProductInfo()">&times;</span>
+                    <div class="modal-body">
+                      <img id="modal-img" src="" alt="Producto" style="max-width:180px;">
+                      <div class="modal-info">
+                        <h3 id="modal-nombre"></h3>
+                        <p id="modal-precio"></p>
+                        <p id="modal-material"></p>
+                        <p id="modal-oferta" style="color:red;font-weight:bold;"></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="product-item">
+                <img src="img/product - LX/S5-removebg-preview.png" alt="Producto 5">
+                <button class="info-btn" onclick="showProductInfo({
+                    nombre: 'Sueter LX',
+                    imagen: 'img/product - LX/S5-removebg-preview.png',
+                    precio: '$40',
+                    material: 'Lana',
+                    oferta: '5% OFF'
+                })">Ver información</button>
+                <div id="product-modal" class="modal" style="display:none;">
+                  <div class="modal-content">
+                    <span class="close" onclick="closeProductInfo()">&times;</span>
+                    <div class="modal-body">
+                      <img id="modal-img" src="" alt="Producto" style="max-width:180px;">
+                      <div class="modal-info">
+                        <h3 id="modal-nombre"></h3>
+                        <p id="modal-precio"></p>
+                        <p id="modal-material"></p>
+                        <p id="modal-oferta" style="color:red;font-weight:bold;"></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="product-item">
+                <img src="img/product - LX/C6-removebg-preview.png" alt="Producto 6">
+                <button class="info-btn" onclick="showProductInfo({
+                    nombre: 'Camisa LX',
+                    imagen: 'img/product - LX/C6-removebg-preview.png',
+                    precio: '$20',
+                    material: 'Algodón',
+                    oferta: '15% OFF'
+                })">Ver información</button>
+                <div id="product-modal" class="modal" style="display:none;">
+                  <div class="modal-content">
+                    <span class="close" onclick="closeProductInfo()">&times;</span>
+                    <div class="modal-body">
+                      <img id="modal-img" src="" alt="Producto" style="max-width:180px;">
+                      <div class="modal-info">
+                        <h3 id="modal-nombre"></h3>
+                        <p id="modal-precio"></p>
+                        <p id="modal-material"></p>
+                        <p id="modal-oferta" style="color:red;font-weight:bold;"></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="product-item">
+                <img src="img/product - LX/S1-removebg-preview.png" alt="Producto 7">
+                <button class="info-btn" onclick="showProductInfo({
+                    nombre: 'Sueter LX - Edición Pareja',
+                    imagen: 'img/product - LX/S1-removebg-preview.png',
+                    precio: '$30',
+                    material: 'Seda',
+                    oferta: '5% OFF'
+                })">Ver información</button>
+                <div id="product-modal" class="modal" style="display:none;">
+                  <div class="modal-content">
+                    <span class="close" onclick="closeProductInfo()">&times;</span>
+                    <div class="modal-body">
+                      <img id="modal-img" src="" alt="Producto" style="max-width:180px;">
+                      <div class="modal-info">
+                        <h3 id="modal-nombre"></h3>
+                        <p id="modal-precio"></p>
+                        <p id="modal-material"></p>
+                        <p id="modal-oferta" style="color:red;font-weight:bold;"></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="product-item">
+                <img src="img/product - LX/S3-removebg-preview.png" alt="Producto 8">
+                <button class="info-btn" onclick="showProductInfo({
+                    nombre: 'Sueter LX - Edición Limitada',
+                    imagen: 'img/product - LX/S3-removebg-preview.png',
+                    precio: '$50',
+                    material: 'Seda',
+                    oferta: '10% OFF'
+                })">Ver información</button>
+                <div id="product-modal" class="modal" style="display:none;">
+                  <div class="modal-content">
+                    <span class="close" onclick="closeProductInfo()">&times;</span>
+                    <div class="modal-body">
+                      <img id="modal-img" src="" alt="Producto" style="max-width:180px;">
+                      <div class="modal-info">
+                        <h3 id="modal-nombre"></h3>
+                        <p id="modal-precio"></p>
+                        <p id="modal-material"></p>
+                        <p id="modal-oferta" style="color:red;font-weight:bold;"></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="product-item">
+                <img src="img/product - LX/C3-removebg-preview.png" alt="Producto 9">
+                <button class="info-btn" onclick="showProductInfo({
+                    nombre: 'Camisa LX',
+                    imagen: 'img/product - LX/C3-removebg-preview.png',
+                    precio: '$15',
+                    material: 'Lino',
+                    oferta: '5% OFF'
+                })">Ver información</button>
+                <div id="product-modal" class="modal" style="display:none;">
+                  <div class="modal-content">
+                    <span class="close" onclick="closeProductInfo()">&times;</span>
+                    <div class="modal-body">
+                      <img id="modal-img" src="" alt="Producto" style="max-width:180px;">
+                      <div class="modal-info">
+                        <h3 id="modal-nombre"></h3>
+                        <p id="modal-precio"></p>
+                        <p id="modal-material"></p>
+                        <p id="modal-oferta" style="color:red;font-weight:bold;"></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="product-item">
+                <img src="img/product - LX/S6-removebg-preview.png" alt="Producto 10">
+                <button class="info-btn" onclick="showProductInfo({
+                    nombre: 'Sueter LX - Edición Limitada',
+                    imagen: 'img/product - LX/S6-removebg-preview.png',
+                    precio: '$29',
+                    material: 'Lino',
+                    oferta: '10% OFF'
+                })">Ver información</button>
+                <div id="product-modal" class="modal" style="display:none;">
+                  <div class="modal-content">
+                    <span class="close" onclick="closeProductInfo()">&times;</span>
+                    <div class="modal-body">
+                      <img id="modal-img" src="" alt="Producto" style="max-width:180px;">
+                      <div class="modal-info">
+                        <h3 id="modal-nombre"></h3>
+                        <p id="modal-precio"></p>
+                        <p id="modal-material"></p>
+                        <p id="modal-oferta" style="color:red;font-weight:bold;"></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="product-item">
+                <img src="img/product - LX/C5-removebg-preview.png" alt="Producto 11">
+                <button class="info-btn" onclick="showProductInfo({
+                    nombre: 'Camisa Lexxo',
+                    imagen: 'img/product - LX/C5-removebg-preview.png',
+                    precio: '$20',
+                    material: 'Lana',
+                    oferta: '10% OFF'
+                })">Ver información</button>
+                <div id="product-modal" class="modal" style="display:none;">
+                  <div class="modal-content">
+                    <span class="close" onclick="closeProductInfo()">&times;</span>
+                    <div class="modal-body">
+                      <img id="modal-img" src="" alt="Producto" style="max-width:180px;">
+                      <div class="modal-info">
+                        <h3 id="modal-nombre"></h3>
+                        <p id="modal-precio"></p>
+                        <p id="modal-material"></p>
+                        <p id="modal-oferta" style="color:red;font-weight:bold;"></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="product-item">
+                <img src="img/product - LX/S4-removebg-preview.png" alt="Producto 12">
+                <button class="info-btn" onclick="showProductInfo({
+                    nombre: 'Sueter LX - Edición Especial',
+                    imagen: 'img/product - LX/S4-removebg-preview.png',
+                    precio: '$25',
+                    material: 'Lana',
+                    oferta: '5% OFF'
+                })">Ver información</button>
+                <div id="product-modal" class="modal" style="display:none;">
+                  <div class="modal-content">
+                    <span class="close" onclick="closeProductInfo()">&times;</span>
+                    <div class="modal-body">
+                      <img id="modal-img" src="" alt="Producto" style="max-width:180px;">
+                      <div class="modal-info">
+                        <h3 id="modal-nombre"></h3>
+                        <p id="modal-precio"></p>
+                        <p id="modal-material"></p>
+                        <p id="modal-oferta" style="color:red;font-weight:bold;"></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact">
+
+        <div class="cart-info">
+
+            <ul>
+                <li><i class="fa-solid fa-envelope"></i> Lexxo@gmail.com</li>
+                <li><i class="fa-brands fa-instagram"></i> Lexxo - Nx</li>
+                <li><i class="fa-brands fa-facebook"></i> Store Lexxo</li>
+                <li><i class="fa-brands fa-twitter"></i> LexxoStore - Nx</li>
+            </ul>
+
+
+        </div>
+
+        <div class="formulario-contact">
+            <h1>Contacto</h1> <br>
+            <p>Si tienes alguna pregunta o comentario, no dudes en ponerte en contacto con nosotros.</p> <br>
+            <form action="#" method="post">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Lexxo. Todos los derechos reservados. Desarrollado por <a href="" target="_blank"> <i
+                    class="fa-solid fa-globe"></i> Ing.Javier - Nexxo</a></p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
