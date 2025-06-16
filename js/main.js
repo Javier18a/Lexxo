@@ -19,8 +19,10 @@ function closeProductInfo() {
           "img/product - LX/Logo-black-removebg-preview.png",
           "img/product - LX/C1-removebg-preview.png",
           "img/product - LX/S2-removebg-preview.png",
+          "img/product - LX/16.png",
           "img/product - LX/C4-removebg-preview.png",
-          "img/product - LX/S5-removebg-preview.png"
+          "img/product - LX/S5-removebg-preview.png",
+          "img/product - LX/20-removebg-preview.png"
         ];
         let sliderIndex = 0;
         const sliderImg = document.getElementById('slider-img');

@@ -63,31 +63,6 @@ nav ul li a {
     text-decoration: none;
 }
 
-/* Responsive nav menu for mobile */
-.menu-toggle {
-    display: none;
-}
-
-.menu-icon {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    margin-top: 10px;
-    width: 30px;
-    height: 25px;
-    justify-content: space-between;
-}
-
-.menu-icon span {
-    display: block;
-    height: 4px;
-    background: #222;
-    border-radius: 2px;
-    margin: 3px 0;
-    transition: 0.3s;
-}
-
-
 main {
     height: 115vh;
     width: 100%;
@@ -100,6 +75,14 @@ main {
     display: none;
 }
 
+.home{
+    width: 450px;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
 .home h2 {
     font-size: 70px;
 }
@@ -110,8 +93,12 @@ main {
 }
 
 .home a {
-    background-color: #1b2631;
+    margin-top: 20px; 
+    margin-right: 15px; 
+    width: 200px; 
+    background-color: #212121;
     color: white;
+    text-align: center;
     padding: 10px 20px;
     border-radius: 5px;
 }
@@ -124,36 +111,12 @@ main {
 }
 
 .image-slider img {
-    width: 250px;
+    width: 300px;
     height: auto;
     border-radius: 10px;
     transition: opacity 0.5s ease;
     opacity: 1;
 }
-
-
-#about {
-    margin: 0 0 20px 0;
-    padding: 20px 0 50px 0;
-    background: #f0f0f0;
-    box-shadow: 20px 10px 20px rgba(0, 0, 0, 0.2);
-    color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-#about h2 {
-    font-size: 30px;
-    margin-bottom: 20px;
-}
-
-#about p {
-    margin-top: 10px;
-    width: 700px;
-}
-
 
 #productos {
     margin: auto;
@@ -166,12 +129,13 @@ main {
 }
 
 #productos h2 {
-    font-size: 30px;
+    font-size: 40px;
     margin-bottom: 10px;
 }
 
 #productos p {
-    margin: 10px;
+    font-size: 17px;
+    margin: 0 0 20px 0;
 }
 
 .product-list {
@@ -199,8 +163,8 @@ main {
 
 .info-btn {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-    color: black;
-    background-color: #c9c7c7;
+    color: white; 
+    background-color: #212121;
     padding: 10px 20px;
     border-radius: 5px;
     border: none;
@@ -369,21 +333,8 @@ footer a {
         flex-direction: column-reverse;
     }
 
-    nav ul.nav-list {
-        display: none;
-        flex-direction: column;
-        background: #fff;
-        position: absolute;
-        top: 40px;
-        right: -285px;
-        width: 350px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-        padding: 10px;
-        z-index: 100;
-    }
-
-    .menu-icon {
-        display: flex;
+    nav{
+        display: none; 
     }
 
     .menu-toggle:checked+.menu-icon+ul.nav-list {
