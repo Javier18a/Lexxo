@@ -1,3 +1,5 @@
+// Código JavaScript para la tienda de productos
+
 function showProductInfo(producto) {
   document.getElementById('modal-img').src = producto.imagen;
   document.getElementById('modal-nombre').textContent = producto.nombre;
@@ -14,6 +16,8 @@ function showProductInfo(producto) {
 function closeProductInfo() {
   document.getElementById('product-modal').style.display = 'none';
 }
+
+//Animación de entrada 
 
 const sliderImages = [
   "img/product - LX/Logo-black-removebg-preview.png",
@@ -38,6 +42,10 @@ function showNextImage() {
   }, 500);
 }
 setInterval(showNextImage, 2200);
+
+
+
+// Smooth scroll para enlaces internos
 
 document.querySelectorAll('.smooth-scroll').forEach(link => {
   link.addEventListener('click', function (e) {
