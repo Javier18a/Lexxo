@@ -25,9 +25,9 @@
 
     <nav>
       <ul class="nav-list">
-      <li><a href="#home" class="smooth-scroll">Inicio</a></li>
-      <li><a href="#productos" class="smooth-scroll">Productos</a></li>
-      <li><a href="#contact" class="smooth-scroll">Contacto</a></li>
+        <li><a href="#home" class="smooth-scroll">Inicio</a></li>
+        <li><a href="#productos" class="smooth-scroll">Productos</a></li>
+        <li><a href="#contact" class="smooth-scroll">Contacto</a></li>
       </ul>
     </nav>
   </header>
@@ -55,6 +55,22 @@
     <p>Explora nuestra gama de productos diseñados para ti.</p>
     <div class="product-list">
 
+      <!-- Agrega esto justo después de la etiqueta <body> -->
+      <div id="cart-container">
+        <button id="cart-btn">
+          <i class="fa fa-shopping-cart"></i> <span id="cart-count">0</span>
+        </button>
+        <div id="cart-modal" class="cart-modal" style="display:none;">
+          <div class="cart-modal-content">
+            <span class="close-cart" onclick="toggleCart()">&times;</span>
+            <h3>Carrito de compras</h3>
+            <ul id="cart-items"></ul>
+            <p id="cart-total"></p>
+            <button onclick="clearCart()">Vaciar carrito</button>
+          </div>
+        </div>
+      </div>
+
       <div class="product-item">
         <img src="img/product - LX/C1-removebg-preview.png" alt="Producto 1">
 
@@ -65,6 +81,7 @@
                     material: 'Algodón',   
                     oferta: '15% OFF' 
                 })">Ver información</button>
+        <button class="add-cart-btn" onclick="addToCart('Camisa LX - Edición Especial', 20)">Agregar al carrito</button>
         <div id="product-modal" class="modal" style="display:none;">
           <div class="modal-content">
             <span class="close" onclick="closeProductInfo()">&times;</span>
@@ -91,6 +108,7 @@
                     material: 'Algodón',
                     oferta: '5% OFF'
                 })">Ver información</button>
+        <button class="add-cart-btn" onclick="addToCart('Camisa LX - Edición Especial', 15)">Agregar al carrito</button>
         <div id="product-modal" class="modal" style="display:none;">
           <div class="modal-content">
             <span class="close" onclick="closeProductInfo()">&times;</span>
@@ -116,6 +134,7 @@
                     precio: '$30',
                     oferta: '5% OFF'
                 })">Ver información</button>
+          <button class="add-cart-btn" onclick="addToCart('Zapatos deportivos', 30)">Agregar al carrito</button>
         <div id="product-modal" class="modal" style="display:none;">
           <div class="modal-content">
             <span class="close" onclick="closeProductInfo()">&times;</span>
@@ -141,6 +160,7 @@
                     material: 'Seda',
                     oferta: '5% OFF'
                 })">Ver información</button>
+                  <button class="add-cart-btn" onclick="addToCart('Sueter LX - Edición Pareja', 30)">Agregar al carrito</button>
         <div id="product-modal" class="modal" style="display:none;">
           <div class="modal-content">
             <span class="close" onclick="closeProductInfo()">&times;</span>
@@ -166,6 +186,7 @@
                     material: 'Lino',
                     oferta: '10% OFF'
                 })">Ver información</button>
+                  <button class="add-cart-btn" onclick="addToCart('Camisa LX - Edición Japonesa', 18)">Agregar al carrito</button>
         <div id="product-modal" class="modal" style="display:none;">
           <div class="modal-content">
             <span class="close" onclick="closeProductInfo()">&times;</span>
@@ -191,6 +212,7 @@
                     precio: '$50',
                     oferta: '5% OFF'
                 })">Ver información</button>
+                  <button class="add-cart-btn" onclick="addToCart('Zapatos NIKE - LX', 50)">Agregar al carrito</button>
         <div id="product-modal" class="modal" style="display:none;">
           <div class="modal-content">
             <span class="close" onclick="closeProductInfo()">&times;</span>
@@ -216,6 +238,7 @@
                     material: 'Lana',
                     oferta: '5% OFF'
                 })">Ver información</button>
+                  <button class="add-cart-btn" onclick="addToCart('Sueter LX', 40)">Agregar al carrito</button>
         <div id="product-modal" class="modal" style="display:none;">
           <div class="modal-content">
             <span class="close" onclick="closeProductInfo()">&times;</span>
@@ -241,6 +264,7 @@
                     material: 'Algodón',
                     oferta: '15% OFF'
                 })">Ver información</button>
+                  <button class="add-cart-btn" onclick="addToCart('Camisa LX', 20)">Agregar al carrito</button>
         <div id="product-modal" class="modal" style="display:none;">
           <div class="modal-content">
             <span class="close" onclick="closeProductInfo()">&times;</span>
@@ -266,6 +290,7 @@
                     material: 'Seda',
                     oferta: '5% OFF'
                 })">Ver información</button>
+                  <button class="add-cart-btn" onclick="addToCart('Sueter LX - Edición Pareja', 30)">Agregar al carrito</button>
         <div id="product-modal" class="modal" style="display:none;">
           <div class="modal-content">
             <span class="close" onclick="closeProductInfo()">&times;</span>
@@ -291,6 +316,7 @@
                     precio: '$45',
                     oferta: '5% OFF'
                 })">Ver información</button>
+                  <button class="add-cart-btn" onclick="addToCart('Zapatos NIKE gris - LX', 45)">Agregar al carrito</button>
         <div id="product-modal" class="modal" style="display:none;">
           <div class="modal-content">
             <span class="close" onclick="closeProductInfo()">&times;</span>
@@ -316,6 +342,7 @@
                     precio: '$55',
                     oferta: '5% OFF'
                 })">Ver información</button>
+                  <button class="add-cart-btn" onclick="addToCart('Zapatos NIKE - LX', 55)">Agregar al carrito</button>
         <div id="product-modal" class="modal" style="display:none;">
           <div class="modal-content">
             <span class="close" onclick="closeProductInfo()">&times;</span>
@@ -341,6 +368,7 @@
                     material: 'Seda',
                     oferta: '10% OFF'
                 })">Ver información</button>
+                  <button class="add-cart-btn" onclick="addToCart('Sueter LX - Edición Limitada', 50)">Agregar al carrito</button>
         <div id="product-modal" class="modal" style="display:none;">
           <div class="modal-content">
             <span class="close" onclick="closeProductInfo()">&times;</span>
@@ -366,6 +394,7 @@
                     material: 'Lino',
                     oferta: '5% OFF'
                 })">Ver información</button>
+                  <button class="add-cart-btn" onclick="addToCart('Camisa LX', 15)">Agregar al carrito</button>
         <div id="product-modal" class="modal" style="display:none;">
           <div class="modal-content">
             <span class="close" onclick="closeProductInfo()">&times;</span>
@@ -391,6 +420,7 @@
                     precio: '$100',
                     oferta: '10% OFF'
                 })">Ver información</button>
+                  <button class="add-cart-btn" onclick="addToCart('Zapatos KING - LX', 100)">Agregar al carrito</button>
         <div id="product-modal" class="modal" style="display:none;">
           <div class="modal-content">
             <span class="close" onclick="closeProductInfo()">&times;</span>
@@ -416,6 +446,7 @@
                     material: 'Lino',
                     oferta: '10% OFF'
                 })">Ver información</button>
+                  <button class="add-cart-btn" onclick="addToCart('Sueter LX - Edición Limitada', 29)">Agregar al carrito</button>
         <div id="product-modal" class="modal" style="display:none;">
           <div class="modal-content">
             <span class="close" onclick="closeProductInfo()">&times;</span>
@@ -441,6 +472,7 @@
                     material: 'Lana',
                     oferta: '10% OFF'
                 })">Ver información</button>
+                  <button class="add-cart-btn" onclick="addToCart('Camisa Lexxo', 20)">Agregar al carrito</button>
         <div id="product-modal" class="modal" style="display:none;">
           <div class="modal-content">
             <span class="close" onclick="closeProductInfo()">&times;</span>
@@ -466,6 +498,7 @@
                     material: 'Lana',
                     oferta: '5% OFF'
                 })">Ver información</button>
+                  <button class="add-cart-btn" onclick="addToCart('Sueter LX - Edición Especial', 25)">Agregar al carrito</button>
         <div id="product-modal" class="modal" style="display:none;">
           <div class="modal-content">
             <span class="close" onclick="closeProductInfo()">&times;</span>
@@ -491,6 +524,7 @@
                     precio: '$70',
                     oferta: '20% OFF'
                 })">Ver información</button>
+                  <button class="add-cart-btn" onclick="addToCart('Zapatos NIKE blancos edición Limitada', 70)">Agregar al carrito</button>
         <div id="product-modal" class="modal" style="display:none;">
           <div class="modal-content">
             <span class="close" onclick="closeProductInfo()">&times;</span>

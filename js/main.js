@@ -59,3 +59,77 @@ document.querySelectorAll('.smooth-scroll').forEach(link => {
     }
   });
 });
+
+
+
+// Mostrar informacion del navegador 
+
+function mostrarInfoNavegador() {
+  alert(
+    "Navegador: " + navigator.appName + "\n" +
+    "Versión: " + navigator.appVersion + "\n" +
+    "Plataforma: " + navigator.platform + "\n" +
+    "Idioma: " + navigator.language + "\n" +
+    "User Agent: " + navigator.userAgent
+  );
+}
+
+
+// Carrito de compras (Contador)
+
+let cart = [];
+
+function addToCart(nombre, precio) {
+  cart.push({ nombre, precio });
+  updateCartCount();
+  saveCart();
+}
+
+function updateCartCount() {
+  document.getElementById('cart-count').textContent = cart.length; 
+}
+
+function toggleCart() {
+  const modal = document.getElementById('cart-modal');
+  modal.style.display = modal.style.display === 'none' ? 'block' : 'none';
+  renderCart();
+}
+
+function renderCart() {
+  const items = document.getElementById('cart-items');
+  items.innerHTML = '';
+  let total = 0;
+  cart.forEach((item, i) => {
+    total += Number(item.precio);
+    const li = document.createElement('li');
+    li.textContent = `${item.nombre} - $${item.precio}`;
+    const removeBtn = document.createElement('button');
+    removeBtn.textContent = 'Eliminar';
+    removeBtn.onclick = () => { cart.splice(i, 1); updateCartCount(); saveCart(); renderCart(); };
+    li.appendChild(removeBtn);
+    items.appendChild(li);
+  });
+  document.getElementById('cart-total').textContent = 'Total: $' + total; 
+}
+
+function clearCart() {
+  cart = [];
+  updateCartCount();
+  saveCart();
+  renderCart();
+}
+
+function saveCart() {
+  localStorage.setItem('cart', JSON.stringify(cart));
+}
+
+function loadCart() {
+  const saved = localStorage.getItem('cart');
+  if (saved) {
+    cart = JSON.parse(saved);
+    updateCartCount();
+  }
+}
+
+document.getElementById('cart-btn').onclick = toggleCart;
+window.onload = loadCart;
